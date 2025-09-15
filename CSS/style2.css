@@ -1,0 +1,33 @@
+.lorem {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background: pink;
+  font-size: 25px;
+  font-weight: 900;
+  width: 50%;
+}
+
+.parm {
+   font-family: "Bitcount", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700px;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+    font-size: 25px;
+    background: gold;
+    width: 50%;
+ 
+}
+h1{
+  font-family: cursive;
+  background: black;
+  color: aliceblue;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 60%;
+}
