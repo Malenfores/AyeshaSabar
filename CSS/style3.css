@@ -1,0 +1,30 @@
+body {
+    background: rgb(181, 208, 218);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.ph1{
+    /* Border in CSS start at 1px maximum 40px. 4 typr border-width,style,color */
+    border-width: 7px;
+    border-style:double;
+    border-color: rgb(138, 64, 12);
+    width: 50%;
+    height: 50%;
+    /* Margin 4 type right , left , top , bottom */
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    /* Padding 4 type right, left, top, bottom */
+    padding-left: 100px;
+    
+}
+.lorem{
+    background: rgb(211, 211, 142);
+    border-width: 2px;
+    border-color: black;
+    border-style: dashed;
+    width: 70%;
+    height: 50%;
+    margin: 50px;
+}
