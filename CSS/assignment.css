@@ -1,0 +1,22 @@
+body{
+    background: rgb(247, 207, 213);
+    font-size: 18px;
+    font-family:sans-serif;
+}
+.lable{
+    text-align:left;
+    border-width: 3px;
+    border-color: black;
+    border-style: double;
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 200px;
+    padding-left: 80px;
+    background:lightcyan;
+}
+.tag{
+    text-align: center;
+}
+.d11{
+    text-align: center;
+}
