@@ -3,24 +3,24 @@ body{
 
 }
 .parent {
-    position: relative;
+    position: absolute;
     height: 300px;
     width: 300px;
     background: pink;
-    border: 7px rgb(27, 15, 27) solid;
-     
+    border: 10px  double;
+     display: flex;
 }
-.parent img{
-    border-radius: 10px;
-    
-    height: 50%;
-      width: 50%;
-     
-}
-.child{
-    
-    position: absolute;
-    left: 130%;
+
+
+
+.child img{
+    position: relative;
+   left: 20px;
+   top: 20px;
+    border:10px double ;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
 
 }
 .parent1 {
