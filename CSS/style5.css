@@ -1,0 +1,48 @@
+body{
+    background: #efefef;
+
+}
+.parent {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background: pink;
+    border: 7px rgb(27, 15, 27) solid;
+     
+}
+.parent img{
+    border-radius: 10px;
+    
+    height: 50%;
+      width: 50%;
+     
+}
+.child{
+    
+    position: absolute;
+    left: 130%;
+
+}
+.parent1 {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 300px;
+    width: 300px;
+    background: pink;
+    border: 7px rgb(27, 15, 27) solid;
+     
+}
+.parent2 {
+    position: relative;
+   left: 40%;
+   
+    height: 300px;
+    width: 300px;
+    background: pink;
+    border: 7px rgb(27, 15, 27) solid;
+     
+}
+
+
+
