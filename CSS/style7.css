@@ -1,0 +1,53 @@
+body{
+    background: #efefef;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.Box{
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 7px;
+    background: rgb(67, 248, 67);
+    position: relative;
+
+}
+.Box::before{
+    background: rgb(102, 189, 218);
+    content: "Before Content ";
+    position: absolute;
+    top: 10px;
+    height: 30px;
+    width: 100px;
+    
+}
+.Box:hover::before{
+    height: 100%;
+    width: 100%;
+}
+.animation{
+     height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 7px;
+    background: pink;
+    animation-name: backgroundchange;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes backgroundchange{
+    from{
+        background: pink;
+    }
+    to{
+        background: rgb(248, 248, 63);
+    }
+}
