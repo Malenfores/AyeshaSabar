@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css"
+    integrity="sha512-UJqci0ZyYcQ0AOJkcIkUCxLS2L6eNcOr7ZiypuInvEhO9uqIDi349MEFrqBzoy1QlfcjfURHl+WTMjEdWcv67A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      background-color: #f7f7f7;
+
+    }
+
+    .bg-team {
+      background-image: url(https://preview.colorlib.com/theme/consultingbiz/assets/img/hero/h1_hero.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 800px;
+      width: 100%;
+    }
+     .bg-team2 {
+      background-image: url(https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/footer_bg.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 800px;
+      width: 100%;
+    }
+
+    .logo {
+      width: 10%;
+    }
+
+
+    .nav-link {
+
+      font-size: 18px;
+      font-weight: 600;
+      color: black;
+      transform: all 1s ease;
+    }
+
+    .nav-link:hover {
+      color: #dc3545 !important;
+    }
+
+    .navbar {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 40px;
+      border-radius: 4px;
+    }
+
+    .pg {
+      padding-left: 38px;
+      padding-right: 38px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .texty {
+      padding: 80px;
+    }
+
+    .b-h1 {
+      font-size: 50px;
+    }
+
+    .p-b {
+      font-size: 20px;
+    }
+
+    .team {
+      padding-top: 100px;
+      padding-left: 100px;
+    }
+
+    .sec2 {
+      font-size: 60px;
+      font-weight: 700;
+    }
+
+    .img3 {
+      height: 10%;
+      width: 20%;
+
+    }
+
+    .centor {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .card1 {
+      background: #fff;
+      border: none;
+      overflow: hidden;
+      border-radius: 0;
+      box-shadow: 0 4px 10px whitesmoke;
+    }
+
+    .card3 {
+
+      background: #fff;
+      border: none;
+      overflow: hidden;
+      border-radius: 0;
+      box-shadow: 0 4px 5px whitesmoke;
+      text-align: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+
+    .card-body1:hover {
+      background: #dc3545;
+      color: white;
+
+
+    }
+    .cardh{
+      transition: transform 0.7s ease;
+      
+    }
+    
+    .cardh:hover {
+      transform: scale(0.95);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card1,
+    .card-body1 {
+      transition: all 1s ease;
+    }
+
+    .befor {
+      position: relative;
+      font-size: 25px;
+      padding-left: 100px;
+      color: #dc3545;
+    }
+
+    .befor::before {
+      position: absolute;
+      content: "";
+      width: 80px;
+      height: 2px;
+      background: #dc3545;
+      top: 50%;
+      left: 0;
+    }
+
+    .befor2 {
+      position: relative;
+      font-size: 25px;
+      padding-left: 100px;
+      color: white;
+    }
+
+    .befor2::before {
+      position: absolute;
+      content: "";
+      width: 80px;
+      height: 2px;
+      background: white;
+      top: 50%;
+      left: 0;
+    }
+
+    .befor3 {
+      position: relative;
+      font-size: 16px;
+      padding-left: 70px;
+      color: #dc3545;
+    }
+
+    .befor3::before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 1.5px;
+      background: #dc3545;
+      top: 50%;
+      left: 0;
+    }
+
+    .icon-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      transition: all 1s ease;
+    }
+
+    .icon-circle img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+      border-radius: 50%;
+      transition: transform 1s ease;
+    }
+
+    .sect3 {
+
+      color: #e0e0e0;
+      background-image: url(image2/header.webp);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 800px;
+      width: 100%;
+
+    }
+
+    .imgu {
+
+      padding-left: 40px;
+      padding-top: 50px;
+    }
+
+    .conten {
+      padding-top: 150px;
+      padding-right: 50px;
+
+
+    }
+
+    .small {
+      font-size: 18px;
+    }
+
+    .box3 {
+      position: absolute;
+      top: 350px;
+      background: #fff;
+      left: 0px;
+      margin-left: 0px;
+      margin-top: 200px;
+      padding: 30px;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .box4{
+      background: blue;
+      width: 70%;
+    }
+
+    .team-4 {
+      background-image: url(image2/img5.webp);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 800px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .text {
+      color: white;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .back {
+      padding-top: 200px;
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+
+    .quote-icon {
+      font-size: 100px;
+      color: #dc3545;
+      margin-bottom: 20px;
+    }
+
+    .ro2 {
+      padding-top: 300px;
+      border-radius: none;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    .sec6{
+      padding:100px;
+      margin-bottom: 200px;
+      margin-top: 100px;
+        }
+        .butt{
+           margin-left: 380px;
+           margin-top: 40px;
+        }
+        .boxin{
+          padding: 20px;
+          background: lightgray;
+          width: 80%;
+          position: absolute;
+          bottom: 270px;
+        }
+        .sec7{
+          position: relative;
+        }
+        .foot{
+          padding-top: 150px;
+          padding-left: 70px;
+        }
+  </style>
+
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <img src="image2/site5.webp" class="logo" alt="logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 dtext gap-5">
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- Section 1 -->
+  <section class="bg-team">
+    <div class="cotainer  team">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="texty ">
+            <span class=" befor">Commited to Succes</span>
+            <br><br>
+            <h1 class="fw-bold b-h1 ">We Help to grow your business</h1>
+            <br>
+            <p class="b-p ">Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate
+            </p>
+            <br>
+            <button class=" btn btn-danger fw-bold text-light pg ">Our services</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <br><br>
+  <!-- Section 2 -->
+  <section class="mt-5 mb-5">
+    <div class="container">
+      <span class=" befor">Our top Services</span>
+      <br><br>
+      <h1 class="sec2">Our Best Services</h1>
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card1 card-shadow border-0 round-0  " style="width: 18rem;">
+            <div class="card-body1 m-3 centor">
+              <div class="icon-circle">
+                <img
+                  src="https://icons.iconarchive.com/icons/fa-team/fontawesome/512/FontAwesome-Wheat-Awn-Circle-Exclamation-icon.png"
+                  title="settings icons" class="card-img-top mx-auto img3" alt="icon">
+              </div>
+
+              <h5 class="card-title fw-bold">Strategy Planning </h5>
+              <br>
+              <p class="card-text">There are many variations of passages of lorem Ipsum available but the new majority
+                have suffered.</p>
+              <br>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card1 card-shadow border-0 round-0 " style="width: 18rem;">
+
+
+
+            <div class="card-body1 m-3 centor">
+              <div class="icon-circle">
+                <img
+                  src="https://icons.iconarchive.com/icons/fa-team/fontawesome/512/FontAwesome-Boxes-Packing-icon.png"
+                  title="settings icons" class="card-img-top mx-auto img3" alt="icon">
+              </div>
+              <h5 class="card-title fw-bold">Insurance Services</h5>
+              <br>
+              <p class="card-text">There are many variations of passages of lorem Ipsum available but the new majority
+                have suffered.</p>
+              <br>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card1 card-shadow border-0 round-0" style="width: 18rem;">
+
+
+            <div class="card-body1 m-3 centor">
+
+              <div class="icon-circle">
+                <img src="https://icons.iconarchive.com/icons/fa-team/fontawesome/512/FontAwesome-Gears-icon.png"
+                  title="settings icons" class="card-img-top mx-auto img3" alt="icon">
+              </div>
+              <h5 class="card-title fw-bold">Audit & Evaluation</h5>
+              <br>
+              <p class="card-text">There are many variations of passages of lorem Ipsum available but the new majority
+                have suffered.</p>
+              <br>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br>
+  <!-- Section 3 -->
+  <section class="sect3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 ">
+
+          <div class="sec3">
+            <div class="imgu">
+              <img class="imgu" src="image2/headerup.webp" alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="conten ">
+            <span class=" befor2 text-light">our top Services</span>
+            <br><br>
+            <h1 class="fw-bold b-h1 ">Our Best services</h1>
+            <br>
+            <p class="small fw-bold ">Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess cillum dolore egru
+              lofrre dsu quality mollit anim laborumuis au dolor in voluptate velit cillu.
+            </p>
+            <br>
+            <p>Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess cillum dolore egru lofrre dsu quality
+              mollit anim laborumuis au dolor in voluptate velit cillu.
+            </p>
+            <br><br>
+            <button class=" btn btn-danger fw-bold text-light pg "> More about us</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Section 4 -->
+  <br><br><br><br><br><br>
+  <section class="mt-5 mb-5">
+    <div class="container">
+      <span class=" befor">OUR PORTFOLIOS OF CASES</span>
+      <br><br>
+      <h1 class="sec2">Featured Case Study</h1>
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card border-0 round-0">
+            <img  class="cardh" src="image2/img1.webp" class="card-img-top" alt="...">
+            <div class="card-body box3">
+
+              <span class=" befor3">Strategy planing</span>
+              <p class="card-text">Within the construction industry as their overdraft</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0 round-0">
+            <img class="cardh" src="image2/img2.webp" class="card-img-top" alt="...">
+            <div class="card-body box3">
+
+              <span class=" befor3">Strategy planing</span>
+              <p class="card-text">Within the construction industry as their overdraft</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br><br><br><br><br>
+      <div class="row mt-5 mb-5">
+        <div class="col-md-6">
+          <div class="card border-0 round-0">
+            <img class="cardh" src="image2/img3.webp" class="card-img-top" alt="...">
+            <div class="card-body box3 ">
+
+              <span class=" befor3">Strategy planing</span>
+              <p class="card-text">Within the construction industry as their overdraft</p>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0 round-0">
+            <img class="cardh" src="image2/img4.webp" class="card-img-top" alt="...">
+            <div class="card-body box3">
+
+              <span class=" befor3">Strategy planing</span>
+              <p class="card-text">Within the construction industry as their overdraft</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <br><br><br><br><br><br><br>>
+  <!-- SEction 5 -->
+  <section class="mt-5 mb-5">
+    <div class="container">
+      <span class=" befor">OUR PROFESSIONAL MEMBERS </span>
+      <br><br>
+      <h1 class="sec2">Our Team Members</h1>
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img class="cardh" src="image2/sec5 img1.webp" class="card-img-top" alt="img">
+            <div class="card-body">
+              <h1>Ethan Welch</h1>
+              <span class=" befor3">UX Designer</span>
+             
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img class="cardh" src="image2/sec5 img2.webp" class="card-img-top" alt="img">
+            <div class="card-body">
+              <h1>Ethan Welch</h1>
+              <span class=" befor3">UX Designer</span>
+             
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img class="cardh" src="image2/sec5 img3.webp" class="card-img-top" alt="img">
+            <div class="card-body">
+              <h1>Ethan Welch</h1>
+              <span class=" befor3">UX Designer</span>
+             
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <br><br><br>
+<!-- Section 6 -->
+     <section class="sec6 bg-danger">
+      <div class="container ">
+        <div class="row ">
+          <div class="col-md-6">
+                  <h1 class="text-light fw-bold">Are you Searching</h1>
+                  <h1 class="text-light fw-bold">For a First-class Consultant?</h1>
+          </div>
+          <div class="col-md-6  ">
+          <button class="bg-dark text-light fw-bold butt">More About Us</button>
+
+          </div>
+        </div>
+      </div>
+     </section>
+   <!-- Section 7 -->
+
+    <section class="mt-5 mb-5">
+    <div class="container">
+      <span class=" befor3">RECENT NEWS OF US</span>
+      <br><br>
+      <h1 class="sec2">Our Recent Blog</h1>
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card border-0 round-0 sec7">
+             <div class="boxin ">
+              <p>By Admin october 27, 2020</p>
+            </div>
+            <img src="image2/img6.webp" class="card-img-top" alt="...">
+            
+            <div class="card-body ">
+            
+                 <h1>16 Easy Ideas to Use in Everyday</h1>
+                 <br>
+                 <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.</p>
+                 <br>
+                 <span class=" befor3">Read more</span>
+                
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-6">
+          <div class="card border-0 round-0 sec7">
+             <div class="boxin ">
+              <p>By Admin october 27, 2020</p>
+            </div>
+            <img src="image2/img7.webp" class="card-img-top" alt="...">
+            
+            <div class="card-body ">
+              
+                 <h1>16 Easy Ideas to Use in Everyday</h1>
+                 <br>
+                 <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua Quis ipsum suspendisse ultrices gra.</p>
+                 <br>
+                 <span class=" befor3">Read more</span>
+                
+            </div>
+          </div>
+        </div>
+
+       
+
+      </div>
+    
+ </div>
+  
+  </section>
+  <br><br><br><br><br>
+
+  <!-- Sectin 8 -->
+   <section class="mt-5 mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="image2/cars1.webp" >
+        </div>
+        <div class="col-md-3">
+          <img src="image2/cars2.webp">
+        </div>
+        <div class="col-md-3">
+          <img src="image2/cars3.webp">
+        </div>
+        <div class="col-md-3">
+          <img src="image2/cars4.webp">
+        </div>
+      </div>
+    </div>
+   </section>
+    <br><br><br><br><br>
+    <!-- Section 9 -->
+      <section class="bg-team2 text-light">
+    <div class="cotainer ">
+      <div class="row foot">
+        <div class="col-md-3">
+          <h1>Consulting.</h1>
+            <br><br>
+            <p>Receive Updates and latest news direct from simply enter.</p>
+            <br><br>
+            <h1>+564 7885 3222</h1>
+            <br><br>
+            <p>Youremail@gmail.com</p>
+        </div>
+        <br>
+         <div class="col-md-3 pe-5">
+           <h2>Location</h2>
+           <br><br>
+           <p>Advanced</p>
+           <br>
+            <p>Management</p>
+            <br>
+             <p>Corporate</p>
+             <br>
+
+              <p>Customer</p>
+              <br>
+               <p>Information</p>
+        </div>
+         <div class="col-md-3">
+           <h2>Explore</h2>
+           <br><br>
+           <p>cookies</p>
+           <br>
+            <p>About</p>
+            <br>
+             <p>Privacy Policy</p>
+             <br>
+
+              <p>Properties</p>
+              <br>
+               <p>Licenses</p>
+          
+        </div>
+         <div class="col-md-3">
+          <h2>Location</h2>
+          <br><br>
+          <p>Subscribe now to get daily updates</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
