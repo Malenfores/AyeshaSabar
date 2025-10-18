@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel Explorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+ <!-- Animation site -->
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- swiper cdn -->
+   <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+  <link href="animate.css">
+  <style>
+    body { padding-top: 70px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }/* Navbar */
+.navbar { box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+.hero h1 { font-size: 4rem; font-weight: bold; }
+.hero .btn { padding: 12px 30px; font-size: 1.2rem; }
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.card img { height: 220px; object-fit: cover; }
+
+/* About */
+#about .row { align-items: center; }
+#about img { border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+/* Contact */
+#contact input, #contact textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+#contact button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #0d6efd, #6f42c1);
+  color: #fff;
+}
+.back{
+   background: #2A7B9B;
+background: radial-gradient(circle, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+ html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    
+
+    swiper-container {
+        padding-top: 100px;
+      width: 90%;
+      height: 90%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: rgb(15, 2, 2);
+    }
+
+    swiper-slide img {
+      width: 50%;
+      height: 60%;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+     
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Travel Explorer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  <!-- Hero -->  <section class="hero" id="home">
+    <div>
+      <h1 class="animate__animated animate__flip">Explore The World</h1>
+      <p class="lead">Discover new places, adventures and cultures</p>
+      <a href="#destinations" class="btn btn-primary btn-lg">Start Exploring</a>
+    </div>
+  </section>  <!-- Destinations -->  <section class="container my-5" id="destinations">
+    <h2 class="text-center mb-4 fw-bold">Popular Destinations</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.XV3JOYdL7aOV11VmqOIJOAHaE8?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Paris">
+          <div class="card-body">
+            <h5 class="card-title">Paris, France</h5>
+            <p class="card-text">The city of lights, love, and fashion.</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalParis">Explore</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://th.bing.com/th/id/R.7d4010383f542e58f7e05cad978f8aac?rik=J%2b5s0ubQ5lndLg&pid=ImgRaw&r=0" class="card-img-top" alt="Tokyo">
+          <div class="card-body">
+            <h5 class="card-title">Tokyo, Japan</h5>
+            <p class="card-text">A mix of tradition, technology, and neon lights.</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalTokyo">Explore</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://th.bing.com/th/id/OIP.XdsE3WJwBpiuOr2TsRP8IAHaEs?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="New York">
+          <div class="card-body">
+            <h5 class="card-title">New York, USA</h5>
+            <p class="card-text">The city that never sleeps, full of energy.</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalNY">Explore</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- About -->  <section class="bg-light py-5" id="about">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" class="img-fluid" alt="About Travel">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2 class="fw-bold mb-3">About Us</h2>
+          <p>Travel Explorer is your ultimate guide to discovering the most amazing destinations around the world. We bring you curated travel experiences and hidden gems that inspire wanderlust.</p>
+          <p>From beaches to mountains, bustling cities to quiet escapes, we share it all. Start your journey with us today!</p>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Contact -->  <section class="container back py-5" id="contact">
+    <h2 class="text-center mb-4 fw-bold">Contact Us</h2>
+    <form class="col-md-8 mx-auto">
+      <div class="mb-3">
+        <label class="form-label"><i class="bi bi-person"></i> Name</label>
+        <input type="text" class="form-control" placeholder="Your Name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><i class="bi bi-envelope"></i> Email</label>
+        <input type="email" class="form-control" placeholder="Your Email">
+      </div>
+      <div class="mb-3">
+        <label class="form-label"><i class="bi bi-chat-dots"></i> Message</label>
+        <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary"><i class="bi bi-send"></i> Send Message</button>
+      </div>
+    </form>
+  </section>  <!-- Footer -->  <footer class="text-white text-center py-3">
+    <p class="mb-0">Travel Explorer © 2025 | Designed with ❤ using Bootstrap</p>
+  </footer>  <!-- Modals -->  <div class="modal fade" id="modalParis" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Paris, France</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Paris is home to the Eiffel Tower, Louvre Museum, and incredible cuisine. Known as the city of love, it’s a top travel destination worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>  <div class="modal fade" id="modalTokyo" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Tokyo, Japan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Tokyo combines futuristic technology with traditional temples. From sushi to cherry blossoms, Tokyo offers a unique cultural experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>  <div class="modal fade" id="modalNY" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">New York, USA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>New York offers Times Square, Central Park, Broadway shows, and endless skyscrapers. A hub of culture, food, and entertainment.</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <br><br>
+
+ 
+        <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+    pagination="true" pagination-clickable="true" navigation="true">
+    
+    <swiper-slide lazy="true">
+      <img loading="lazy" src="https://tse1.mm.bing.net/th/id/OIP.XV3JOYdL7aOV11VmqOIJOAHaE8?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" />
+    </swiper-slide>
+    <swiper-slide lazy="true">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" />
+    </swiper-slide>
+    <swiper-slide lazy="true">
+      <img loading="lazy" src="https://th.bing.com/th/id/OIP.XdsE3WJwBpiuOr2TsRP8IAHaEs?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" />
+    </swiper-slide>
+    
+   
+  </swiper-container>
+
+   <br><br><br><br><br><br><br><br>
+
+     
+
+  
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+ 
+
+ 
+</body>
+</html>
