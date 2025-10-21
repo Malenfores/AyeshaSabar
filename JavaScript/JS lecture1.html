@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JavaScript Page</title>
+
+    <style>
+      body {
+
+        background: lightgrey;
+        display: block;
+      }
+
+
+      .con {
+        position: relative;
+        top: 150px;
+        left: 400px;
+        width: 40%;
+        background: white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        padding: 40px 60px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .con:hover {
+        background: linear-gradient(135deg, #fceabb, #f8b500);
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        transform: scale(1.0);
+
+      }
+
+      h1 {
+        color: #ff6f00;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div class="container">
+        <div class="row">
+          <h2>Check Console (Press F12 or Right Click → Inspect → Console)</h2>
+          <div class="con">
+            <h1> My First JavaScript Program </h1>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script>
+      alert("Hello! Welcome to JavaScript ");
+      //  Declaring variables
+      var userName = "Ayesha";      // Can change anytime
+      let today = "Tuesday";       // Can change later
+      const language = "JavaScript"; // Fixed value
+
+      //  Printing simple messages
+      console.log(" My First JavaScript Program ");
+      console.log("Hello " + userName);
+      console.log("Today is " + today);
+      console.log("I’m learning " + language);
+
+      var a;
+      a = 10;
+      console.log("First Value of a is in var:");
+      console.log(a);
+      function first() {
+        a = 20;
+        console.log("Second Value of a is in var :");
+        console.log(a);
+      }
+      first();
+      let b;
+      b = 200;
+      console.log("First Value of b is in let:");
+      console.log(b);
+      function great() {
+        b = 300;
+        console.log("Second Value of b is in let:");
+        console.log(b);
+      }
+      great();
+
+      const c = 700;
+      console.log(" Value of c is in const :");
+      console.log(c);
+
+    </script>
+
+
+  </body>
+
+  </html>
+
+</body>
+
+</html>
