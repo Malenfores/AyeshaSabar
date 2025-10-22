@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Operators with Animation</title>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    h2 {
+      color: #38bdf8;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+
+    .box {
+      max-width: 800px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 40px rgba(56, 189, 248, 0.5);
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+      font-size: 0.9em;
+    }
+
+    /* Smooth fade-in animation */
+    [data-aos] {
+      transition: all 1s ease;
+    }
+  </style>
+</head>
+
+<body onload="showMessage()">
+
+  <header data-aos="fade-down">
+    JavaScript Operators
+  </header>
+
+  <section class="box" data-aos="fade-up ">
+    <h2> Arithmetic Operators</h2>
+    <p>Arithmetic operators are used to perform mathematical calculations like addition, subtraction, multiplication,
+      and division.</p>
+    <p><strong>Example:</strong> <code>let sum = 5 + 3;</code> → Result is 8</p>
+  </section>
+
+  <section class="box" data-aos="fade-right ">
+    <h2> Logical Operators</h2>
+    <p>Logical operators combine or invert conditions. Common ones are AND (<code>&&</code>), OR (<code>||</code>), and
+      NOT (<code>!</code>).</p>
+    <p><strong>Example:</strong> <code>(5 > 3 && 10 > 7)</code> → Result is <code>true</code></p>
+  </section>
+
+  <section class="box" data-aos="fade-left ">
+    <h2> String Concatenation</h2>
+    <p>String concatenation joins two or more text strings using the <code>+</code> operator.</p>
+    <p><strong>Example:</strong> <code>"Hello" + " " + "World"</code> → Result is <code>"Hello World"</code></p>
+  </section>
+
+  <footer data-aos="zoom-in">
+    JavaScript Learning Page
+  </footer>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function showMessage() {
+      alert("Welcome to JavaScript!");
+      console.log(" Welcome to JavaScript  ");
+
+      // Arithmetic Example
+      var a = 10, b = 5;
+      console.log("Arithmetic Operators Example:");
+      console.log("a + b =", a + b);
+      console.log("a - b =", a - b);
+      console.log("a * b =", a * b);
+      console.log("a / b =", a / b);
+      console.log("a % b =", a % b);
+      // Increment operator
+      console.log("Increment Operators Example:");
+      var t = 50;
+      var z = ++t;
+      console.log("++t =", z);
+      // Decrement operator
+      console.log("Decrement Operators Example:");
+      var v = 90;
+      var p = --v;
+      console.log("--v =", p);
+
+      // Logical Example
+      
+      console.log("\nLogical Operators Example:");
+      console.log("(a > b && b < 10):", (a > b && b < 10));
+      console.log("(a < b || b < 10):", (a < b || b < 10));
+      console.log("(a == b):", (a == b));
+      console.log("!(a == b):", !(a == b));
+      console.log("!(a === b):", !(a === b));
+
+
+      // String Concatenation Example
+      var first = "JavaScript", second = "is a language!";
+      console.log("\nString Concatenation Example:");
+       console.log("\n First String :");
+      console.log(first + " " + second);
+       first = "Ayesha", second="Fatima";
+      console.log("\nSecond String:");
+      console.log(first + " " + second);
+    }
+  </script>
+</body>
+
+</html>
