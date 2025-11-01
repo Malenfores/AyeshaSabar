@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+
+
+    <script>
+        // print name for five times using while loop
+        console.log("| print name for five times using while loop |");
+        var name;
+        name = "Ayesha";
+        var count = 1;
+        console.log("start");
+        while (count <= 5) {
+            console.log(name);
+            count++;
+        }
+        console.log("End");
+        //   user printing papers for 5 times
+        console.log("| user printing papers for 5 times |");
+        var user = 1;
+        console.log("Printing start");
+        while (user <= 10) {
+            console.log("user print " + user + " data");
+            user++;
+        }
+        console.log("Printer finished the papers.");
+
+        // print numbers from 1 to 10
+
+        console.log("| print numbers from 1 to 10 |");
+        var number = 1;
+        console.log("start printing numbers.");
+        while (number <= 10) {
+            console.log("Number " + number);
+            number++;
+        }
+        console.log("End");
+
+        // print numbers from 20  down to 1 into descending order
+
+        console.log("| print numbers from 20  down to 1 into descending order |");
+        var number = 20;
+        console.log("start printing numbers.");
+        while (number >= 1) {
+            console.log("Number " + number);
+            number--;
+        }
+        console.log("End");
+
+        // calculate sum of numbers from 1 to 50
+
+        console.log("| calculate sum of numbers from 1 to 50 |");
+        var sum = 0;
+        var no = 1;
+        console.log("start printing numbers.");
+        while (no <= 50) {
+            sum += no;
+            console.log("Sum of numbers from 1 to " + no + " is :" + sum);
+            no++;
+        }
+        console.log("End");
+
+        // | enter a number between 1 and 10 ||
+        console.log("| Enter a number between 1 and 10 |");
+        var number = prompt("Enter a number between 1 and 10:");
+
+        while (number < 1 || number > 10) {
+            console.log("Invalid number: " + number);
+            number = prompt("Please enter a valid number between 1 and 10:");
+        }
+
+        console.log("You entered a valid number: " + number);
+
+
+        // ||  Multiplication Table of 7 ||
+        console.log("|  Multiplication Table of 7 |");
+
+        var i = 1;
+
+        while (i <= 10) {
+            console.log("7 x " + i + " = " + (7 * i));
+            i++;
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
