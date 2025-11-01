@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS loops</title>
+</head>
+
+<body>
+
+    <script>
+        // for loop
+        // print name for five times using for loop
+        console.log("| print name for five times using for loop |");
+        var name;
+        name = "Ayesha";
+
+        console.log("start");
+        for (var count = 1; count <= 5; count++) {
+            console.log(name);
+        }
+        console.log("End");
+        //   user printing papers for 5 times
+        console.log("| user printing papers for 5 times |");
+        console.log("Printing start");
+        for (var user = 1; user <= 10; user++) {
+            console.log("user print " + user + " data");
+        }
+        console.log("Printer finished the papers.");
+
+        // print numbers from 1 to 10
+
+        console.log("| print numbers from 1 to 10 |");
+
+        console.log("start printing numbers.");
+        for (var number = 1; number <= 10; number++) {
+            console.log("Number " + number);
+        }
+        console.log("End");
+
+        // print numbers from 20  down to 1 into descending order
+
+        console.log("| print numbers from 20  down to 1 into descending order |");
+
+        console.log("start printing numbers.");
+        for (var number = 20; number >= 1; number--) {
+            console.log("Number " + number);
+
+        }
+        console.log("End");
+
+        // calculate sum of numbers from 1 to 50
+
+        console.log("| calculate sum of numbers from 1 to 50 |");
+        var sum = 0;
+
+        console.log("start printing numbers.");
+        for (var no = 1; no <= 50; no++) {
+            sum += no;
+            console.log("Sum of numbers from 1 to " + no + " is :" + sum);
+
+        }
+        console.log("End");
+
+        // | enter a number between 1 and 10 ||
+        console.log("| Enter a number between 1 and 10 |");
+        var number = prompt("Enter a number between 1 and 10:");
+
+        for (var number = prompt("Enter a number between 1 and 10:"); number < 1 || number > 10;) {
+            console.log("Invalid number: " + number);
+            number = prompt("Please enter a valid number between 1 and 10:");
+        }
+
+        console.log("You entered a valid number: " + number);
+
+
+        // ||  Multiplication Table of 7 ||
+        console.log("|  Multiplication Table of 7 |");
+
+
+        for (var i = 1; i <= 10; i++) {
+            console.log("7 x " + i + " = " + (7 * i));
+
+        }
+
+
+
+    </script>
+
+    <script>
+        // ===========================
+        // ||   Do...While Loop Programs in JavaScript   ||
+        // ===========================
+
+        console.log("|| Do While Loop Programs in JavaScript ||");
+        console.log("---------------------------------------\n");
+
+        // 1️⃣ Print numbers from 1 to 5
+        console.log("Program 1: Print numbers from 1 to 5\n");
+        var i = 1;
+        do {
+            console.log(i);
+            i++;
+        } while (i <= 5);
+        console.log("---------------------------------------\n");
+
+        // 2️⃣ Print "Hello World" 3 times
+        console.log('Program 2: Print "Hello World" 3 times\n');
+        var count = 1;
+        do {
+            console.log("Hello World");
+            count++;
+        } while (count <= 3);
+        console.log("---------------------------------------\n");
+
+        // 3️⃣ Print even numbers between 2 and 10
+        console.log("Program 3: Print even numbers between 2 and 10\n");
+        var num = 2;
+        do {
+            console.log(num);
+            num += 2;
+        } while (num <= 10);
+        console.log("---------------------------------------\n");
+
+        // 4️⃣ Count down from 5 to 1
+        console.log("Program 4: Count down from 5 to 1\n");
+        var n = 5;
+        do {
+            console.log(n);
+            n--;
+        } while (n >= 1);
+        console.log("---------------------------------------\n");
+
+        // 5️⃣ Multiplication table of 3
+        console.log("Program 5: Multiplication Table of 3\n");
+        var table = 1;
+        do {
+            console.log("3 x "+ table + " = " + (3*table));
+            table++;
+        } while (table <= 10);
+        console.log("---------------------------------------\n");
+
+        // 6️⃣ Sum numbers from 1 to 10
+        console.log("Program 6: Sum numbers from 1 to 10\n");
+        var sum = 0;
+        var x = 1;
+        do {
+            sum += x;
+            x++;
+        } while (x <= 10);
+        console.log("Sum of numbers from 1 to 10 is :" + sum);
+        console.log("---------------------------------------\n");
+
+        // 7️⃣ Take number from user and print 1 to that number
+        console.log("Program 7: Take a number from user and print 1 to that number\n");
+        var userNum = parseInt(prompt("Enter a number:"));
+        let j = 1;
+        do {
+            console.log(j);
+            j++;
+        } while (j <= userNum);
+        console.log("---------------------------------------\n");
+
+        // 8️⃣ Sum of all even numbers from 1 to 20
+        console.log("Program 8: Sum of all even numbers from 1 to 20\n");
+        var even = 2;
+        var evenSum = 0;
+        do {
+            evenSum += even;
+            even += 2;
+        } while (even <= 20);
+        console.log("Sum of even numbers = " + evenSum);
+        console.log("---------------------------------------\n");
+
+        // 9️⃣ Reverse the digits of a number
+        console.log("Program 9: Reverse the digits of a number\n");
+        var number = parseInt(prompt("Enter a number to reverse:"));
+        var reverse = 0, rem;
+        do {
+            rem = number % 10;
+            reverse = reverse * 10 + rem;
+            number = Math.floor(number / 10);
+        } while (number > 0);
+        console.log("Reversed Number = " + reverse);
+        console.log("---------------------------------------\n");
+
+        // 🔟 Factorial of a number
+        console.log("Program 10: Find factorial of a number\n");
+        let factNum = 67;
+        let fact = 1;
+        var k = 1;
+        do {
+            fact *= k;
+            k++;
+        } while (k <= factNum);
+        console.log("Factorial of "+ factNum + " = "+ fact);
+        console.log("---------------------------------------\n");
+
+        // 11 Print numbers 1–10 but skip 5
+        console.log("Program 11: Print numbers from 1 to 10, skip 5\n");
+        let skip = 1;
+        do {
+            if (skip === 5) {
+                skip++;
+                continue; // Skip 5
+            }
+            console.log(skip);
+            skip++;
+        } while (skip <= 10);
+        console.log("---------------------------------------\n");
+
+        // 12 Keep prompting user until they type "exit"
+        console.log('Program 12: Keep prompting user until they type "exit"\n');
+        let input;
+        do {
+            input = prompt("Type something (or 'exit' to stop):");
+            console.log("You typed:", input);
+        } while (input !== "exit");
+        console.log("Program Ended!");
+        console.log("---------------------------------------\n");
+
+        // 13 Count the number of digits in a number
+        console.log("Program 13: Count digits in a number\n");
+        let digitNum = parseInt(prompt("Enter a number:"));
+        let digits = 0;
+        do {
+            digitNum = Math.floor(digitNum / 10);
+            digits++;
+        } while (digitNum > 0);
+        console.log("Total digits = " + digits);
+        console.log("---------------------------------------\n");
+
+        // 14 Generate random number until 7 appears
+        console.log("Program 14: Generate random number (1–10) until 7 appears\n");
+        let randomNum;
+        do {
+            randomNum = Math.floor(Math.random() * 10) + 1;
+            console.log("Generated:", randomNum);
+        } while (randomNum !== 7);
+        console.log("Lucky 7 found!");
+        console.log("---------------------------------------\n");
+
+        // 15 Keep adding random numbers (1–100) until total exceeds 500
+        console.log("Program 15: Add random numbers (1–100) until total exceeds 500\n");
+        let total = 0;
+        let countAdd = 0;
+        do {
+            let rand = Math.floor(Math.random() * 100) + 1;
+            total += rand;
+            countAdd++;
+            console.log("Added "+ rand + " , Total = "+ total);
+        } while (total <= 500);
+        console.log("Total exceeded 500 after adding "+ countAdd + " numbers!");
+        console.log("---------------------------------------\n");
+    </script>
+
+
+
+
+
+</body>
+
+</html>
