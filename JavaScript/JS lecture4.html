@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+    /* ===== General Theme ===== */
+    :root {
+      --bg: #0b1120;
+      --card: #111a2b;
+      --accent: #00c6ff;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #050b16, #0f172a 60%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(90deg, #00c6ff33, transparent);
+    }
+    header h1 {
+      font-size: 2.4em;
+      color: var(--accent);
+    }
+    header p {
+      color: var(--muted);
+      font-size: 1.1em;
+    }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* ===== Card Style ===== */
+    .card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: var(--radius);
+      margin-bottom: 30px;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+       box-shadow: 0 20px 40px rgba(0,198,255,0.1);
+
+    }
+    .card h2 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+    pre {
+      background: #0f1c33;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      color: #c0efff;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    code {
+      font-family: "Courier New", monospace;
+      font-size: 0.95em;
+    }
+
+    /* ===== Section Animation (AOS-like) ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+    }
+    @keyframes fadeUp {
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(180deg, #0f172a, #020617);
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+  </style>
+    
+</head>
+
+<body>
+   
+  <header>
+    <h1>JavaScript Conditions</h1>
+    
+  </header>
+
+  <div class="container">
+
+    <section class="card fade-in">
+      <h2>1. if Statement</h2>
+      <p>The <b>if</b> statement executes a block of code only if the given condition is true.</p>
+      <pre><code>let age = 20;
+if (age >= 18) {
+  console.log(\"You are eligible to vote.\");
+}</code></pre>
+    </section>
+
+    <section class="card fade-in">
+      <h2>2. if...else Statement</h2>
+      <p>Used when you want to perform one action if a condition is true, and another if it’s false.</p>
+      <pre><code>let marks = 45;
+if (marks >= 50) {
+  console.log(\"You passed the exam.\");
+} else {
+  console.log(\"You failed the exam.\");
+}</code></pre>
+    </section>
+
+    <section class="card fade-in">
+      <h2>3. if...else if...else Statement</h2>
+      <p>Used when you have multiple conditions to check, one after another.</p>
+      <pre><code>let score = 85;
+if (score >= 90) {
+  console.log(\"Grade A\");
+} else if (score >= 80) {
+  console.log(\"Grade B\");
+} else if (score >= 70) {
+  console.log(\"Grade C\");
+} else {
+  console.log(\"Grade D\");
+}</code></pre>
+    </section>
+
+    <section class="card fade-in">
+      <h2>4. switch Statement</h2>
+      <p>The <b>switch</b> statement tests a variable against many values and executes the matching case.</p>
+      <pre><code>let day = \"Tuesday\";
+switch (day) {
+  case \"Monday\":
+    console.log(\"Start of the week\");
+    break;
+  case \"Tuesday\":
+    console.log(\"Second day of the week\");
+    break;
+  default:
+    console.log(\"Another day\");
+}</code></pre>
+    </section>
+
+    <section class="card fade-in">
+      <h2>5. Ternary Operator</h2>
+      <p>The <b>ternary operator</b> is a shorthand form of the if...else statement. It uses <code>?</code> and <code>:</code>.</p>
+      <pre><code>let number = 10;
+let result = (number % 2 === 0) ? \"Even\" : \"Odd\";
+console.log(result);</code></pre>
+    </section>
+
+  </div>
+
+  <footer>
+     Learn JavaScript Basics |
+  </footer>
+
+   
+ 
+   
+ 
+
+    <script>
+        alert("Welcome in JavaScript");
+        console.log("|| JavaScript Conditions ||");
+        //   || Write a Program to check if the number is even or odd ||
+        console.log("||  If else  Statements   ||");
+        console.log(" || Write a Program to check if the number is even or odd ||");
+        let number = 24;
+        if (number % 2 == 0) {
+            console.log(number + "  Number is Even.");
+        }
+        else {
+            console.log(number + "  Number is Odd.");
+        }
+        //   || Write a Program to whether a user is eligible to vote or not. ||
+        console.log("|| Write a Program to whether a user is eligible to vote or not. ||");
+        let age = 12;
+        if (age >= 18) {
+            console.log("User is eligible to vote.");
+        }
+        else {
+            console.log("User is not eligible to vote.");
+        }
+
+        //   || Write a Program to check whether a number is positive or negative. ||
+        console.log("|| Write a Program to check whether a number is positive or negative. ||");
+        let no = -34;
+        if (no < 0) {
+            console.log(no + " Number is negative");
+        }
+        else {
+            console.log(no + " Number is Positive");
+        }
+
+        //   || Write a Program that check if an enterd password matches the stored password. ||
+        console.log(" || Write a Program that check if an enterd password matches the stored password. ||");
+        let storedPassword = "MySecret123";
+        let enteredPassword = "mysecure";
+        if (enteredPassword === storedPassword) {
+            console.log(" Access granted! Password is correct.");
+        } else {
+            console.log(" Access denied! Incorrect password.");
+        }
+        //   || Write a Program to check if a number is divisible by 5 or not ||
+        console.log("|| Write a Program to check if a number is divisible by 5 or not ||");
+        let d = 150;
+        if (d % 5 == 0) {
+            console.log(d + "  is divisible by 5 ");
+        }
+        else {
+            console.log(d + " is not divisible by 5");
+        }
+
+
+        console.log("||  if else if  Statements   ||");
+        //   || Write a Program to determine the grade of a student based on marks. ||
+
+        console.log("|| Write a Program to determine the grade of a student based on marks. ||");
+        let marks = 79;
+        if (marks >= 90)
+            console.log(marks + " has Grade: A");
+        else if (marks >= 80)
+            console.log(marks + " has Grade: B");
+        else if (marks >= 70)
+            console.log(marks + " has Grade: C");
+        else if (marks >= 60)
+            console.log(marks + " has Grade: D");
+        else
+            console.log(marks + " has Grade: F");
+
+        //   || Write a program to determine the largest of three numbers.  ||
+        console.log("|| Write a program to determine the largest of three numbers.  ||");
+        let a = 12, b = 45, c = 30, e = 67;
+        if (a > b && a > c) console.log("Largest is:", a);
+        else if (b > c && b > e) console.log("Largest is :", b);
+        else if (c > d) console.log("Largest is :", c);
+        else console.log("Largest is :", e);
+
+        //   || Write a program to checks the month name based its number  ||
+        console.log(" || Write a program to checks the month name based its number  ||");
+        let monthNum = 11;
+        if (monthNum === 1)
+            console.log(monthNum + " number has month January");
+        else if (monthNum === 2)
+            console.log(monthNum + " number has month February");
+        else if (monthNum === 3)
+            console.log(monthNum + " number has month March");
+        else if (monthNum === 4)
+            console.log(monthNum + " number has month April");
+        else if (monthNum === 5)
+            console.log(monthNum + " number has month May");
+        else if (monthNum === 6)
+            console.log(monthNum + " number has month June");
+        else if (monthNum === 7)
+            console.log(monthNum + " number has month July");
+        else if (monthNum === 8)
+            console.log(monthNum + " number has month August");
+        else if (monthNum === 9)
+            console.log(monthNum + " number has month September");
+        else if (monthNum === 10)
+            console.log(monthNum + " number has month Octuber ");
+        else if (monthNum === 11)
+            console.log(monthNum + " number has month November");
+        else if (monthNum === 12)
+            console.log(monthNum + " number has month December");
+        else console.log("This number does not contain any month .");
+
+        //   || Write a program that checks the temperature and prints cold warm hot  ||
+        console.log(" || Write a program that checks the temperature and prints cold warm hot  ||");
+        let temp = 20;
+        if (temp < 10)
+            console.log(temp + " has Cold Weather");
+        else if (temp <= 25)
+            console.log(temp + " has Warm Weather");
+        else
+            console.log(temp + " has Hot Weather");
+
+        //   || Write a program to determine if a character is a vowel , consonant, digit , or special symbol  ||
+
+        console.log("|| Write a program to determine if a character is a vowel , consonant, digit , or special symbol  ||");
+
+        let ch = "$";
+        if (
+            ch === "a" || ch === "e" || ch === "i" || ch === "o" || ch === "u" ||
+            ch === "A" || ch === "E" || ch === "I" || ch === "O" || ch === "U"
+        ) {
+            console.log("Vowel");
+        }
+        else if (
+            (ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z")
+        ) {
+            console.log("Consonant");
+        }
+        else if (ch >= "0" && ch <= "9") {
+            console.log("Digit");
+        }
+        else {
+            console.log("Special symbol");
+        }
+
+
+
+        console.log("||  Switch Statements   ||");
+
+        //   || Write a program to print  the day of the week based on a number  ||
+
+        console.log("|| Write a program to print  the day of the week based on a number  ||");
+        let day = 3;
+        switch (day) {
+            case 1: console.log(day + " has day Monday");
+                break;
+            case 2: console.log(day + " has day Tuesday");
+                break;
+            case 3: console.log(day + " has day Wednesday");
+                break;
+            case 4: console.log(day + " has day Thursday");
+                break;
+            case 5: console.log(day + " has day Friday");
+                break;
+            case 6: console.log(day + " has day Saturday");
+                break;
+            case 7: console.log(day + " has day Sunday");
+                break;
+            default: console.log(day + " Invalid day");
+        }
+
+        //   || Write a program that takes a number and print summer autumn winter spring ||
+
+        console.log("|| Write a program that takes a number and print summer autumn winter spring || ");
+        let season = 2;
+        switch (season) {
+            case 1: console.log("Spring"); break;
+            case 2: console.log("Summer"); break;
+            case 3: console.log("Autumn"); break;
+            case 4: console.log("Winter"); break;
+            default: console.log("Invalid number");
+        }
+
+        //   || Write a program that performs a simple calculator using switch  ||
+
+        console.log(" || Write a program that performs a simple calculator using switch  || ");
+        let num1 = 10, num2 = 5, op = "+";
+        switch (op) {
+            case "+": console.log("Number1 + Number2 = " + (num1 + num2)); break;
+            case "-": console.log("Number1 - Number2 = " + (num1 - num2)); break;
+            case "*": console.log("Number1 * Number2 = " + (num1 * num2)); break;
+            case "/": console.log("Number1 / Number2 = " + (num1 / num2)); break;
+            default: console.log("Invalid operator");
+        }
+        // || write a program to Display message according to traffic light color ||
+        console.log("|| write a program to Display message according to traffic light color ||");
+
+        let color = "yellow";
+        let message;
+
+        switch (color) {
+            case "red":
+                message = "Stop! The light is red.";
+                break;
+            case "yellow":
+                message = "Ready to move! The light is yellow.";
+                break;
+            case "green":
+                message = "Go! The light is green.";
+                break;
+            default:
+                message = "Invalid traffic light color";
+        }
+
+        console.log("Traffic Light Color:", color, "→", message);
+
+
+        // || Write a  Program to  Print remarks according to grade letter (A–F) ||
+        console.log("|| Write a  Program to  Print remarks according to grade letter (A-F) ||");
+
+        let grade = "C";
+        let remark;
+
+        switch (grade) {
+            case "A": remark = "Excellent performance";
+                break;
+            case "B": remark = "Very Good performance";
+                break;
+            case "C": remark = "Good performance";
+                break;
+            case "D": remark = "Satisfactory performance";
+                break;
+            case "F": remark = "Failed - Needs improvement";
+                break;
+            default:
+                remark = "Invalid grade";
+        }
+
+        console.log("Grade:", grade, "→", remark);
+
+
+
+        // ternary operator program 
+        console.log("Ternary Operator Program ");
+
+        // ||  write a program to  Check if number is positive or negative using ternary operator ||
+        console.log("||  write a program to  Check if number is positive or negative using ternary operator ||");
+
+        let num = -7;
+        (num >= 0 ? console.log(num + " is positive number ") : console.log(num + " is negative number "))
+
+
+
+        // Program 17: Find the largest of two numbers using ternary operator
+        console.log(" || Write a program to find largest of two numbers using ternary operators ||");
+        let x, y;
+        x = 21;
+        y = 78;
+        (x > y ? console.log(x + " is largest number ") : console.log(y + " is largest number "))
+
+
+        // || Write a program to  Check if year is leap year or not using ternary operator ||
+        console.log(" || Write a program to  Check if year is leap year or not using ternary operator ||");
+        let year = 2024;
+
+        (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0))
+            ? console.log(year + " is a leap year")
+            : console.log(year + " is not a leap year");
+
+        // || Program to check whether a student has passed or failed based on marks using ternary operator ||
+        console.log(" || Program to check whether a student has passed or failed based on marks using ternary operator ||");
+
+        let m = 75;
+        (m >= 50
+            ? console.log("Marks: " + m + " → Student Passed ")
+            : console.log("Marks: " + m + " → Student Failed "));
+
+        // Program to determine if an entered character is uppercase or lowercase using ternary operator
+          console.log(" ||  Program to determine if an entered character is uppercase or lowercase using ternary operator ||");
+        let l = "A"; 
+        (l >= "A" && l <= "Z")
+            ? console.log("Character: " + l + " → Uppercase ")
+            : (l >= "a" && l <= "z")
+                ? console.log("Character: " + l + " → Lowercase ")
+                : console.log("Character: " + l + " → Not a letter ");
+
+
+
+    </script>
+
+</body>
+
+</html>
