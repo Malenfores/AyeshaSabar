@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+    <script>
+        // 1D array
+        var arr = ["calculus", "stat", "linkdin"];
+        console.log(arr);
+        var arr2 = [1, 2, 3, 4, 5, 6];
+        console.log(arr2);
+        console.log(arr2[1]);
+        // 2D array
+        var arr3 = [["js ", "html ", "CSS "], [1, 2, 3, 4, 5]];
+        console.log(arr3);
+        console.log(arr3[1][2]);
+        // Key value pair in array
+        var arr4 = {
+            name: "Ayesha",
+            age: 20,
+            education: "BSCS"
+        }
+        console.log(arr4.name);
+        console.log(arr4.age);
+        console.log(arr4.education);
+    </script>
+    <script>
+        console.log("=== Student Marks Record ===");
+
+        // 1D array for subjects
+        console.log(" | 1D Array for Subjects |")
+        let subjects = ["Math", "Science", "English"];
+
+        // 2D array for marks
+        console.log(" | 2D Array for marks |")
+        let marks = [
+            [85, 90, 78],  // Ali
+            [70, 88, 95],  // Sara
+            [92, 80, 86]   // Ahmed
+        ];
+
+        // Array of key-value pairs (objects)
+        console.log(" | Array of key-value pairs (objects) |")
+        let students = [
+            { name: "Ali", marks: marks[0] },
+            { name: "Sara", marks: marks[1] },
+            { name: "Ahmed", marks: marks[2] }
+        ];
+
+        // Student 1
+        let total1 = students[0].marks[0] + students[0].marks[1] + students[0].marks[2];
+        let avg1 = total1 / subjects.length;
+        console.log("\nStudent: " + students[0].name);
+        console.log(subjects[0] + ": " + students[0].marks[0]);
+        console.log(subjects[1] + ": " + students[0].marks[1]);
+        console.log(subjects[2] + ": " + students[0].marks[2]);
+        console.log("Total: " + total1);
+        console.log("Average: " + avg1.toFixed(2));
+
+        // Student 2
+        let total2 = students[1].marks[0] + students[1].marks[1] + students[1].marks[2];
+        let avg2 = total2 / subjects.length;
+        console.log("\nStudent: " + students[1].name);
+        console.log(subjects[0] + ": " + students[1].marks[0]);
+        console.log(subjects[1] + ": " + students[1].marks[1]);
+        console.log(subjects[2] + ": " + students[1].marks[2]);
+        console.log("Total: " + total2);
+        console.log("Average: " + avg2.toFixed(2));
+
+        // Student 3
+        let total3 = students[2].marks[0] + students[2].marks[1] + students[2].marks[2];
+        let avg3 = total3 / subjects.length;
+        console.log("\nStudent: " + students[2].name);
+        console.log(subjects[0] + ": " + students[2].marks[0]);
+        console.log(subjects[1] + ": " + students[2].marks[1]);
+        console.log(subjects[2] + ": " + students[2].marks[2]);
+        console.log("Total: " + total3);
+        console.log("Average: " + avg3.toFixed(2));
+
+    </script>
+    <!-- New KeyWord Array -->
+    <script>
+        console.log(" | new keyword Array |");
+        var arr = new Array("apple", "banana", "candy");
+        console.log("\nnew Keyword", arr[1]);
+        // New Keyword  object/ array key
+        console.log(" | New Keyword  object/ array key |");
+        var arr1 = new Object(
+            {
+                name: "Ayesha", class: " CS", roll: 13
+            }
+        );
+        console.log(arr1.name, "new Keyword Object");
+        // New Keyword object using Anonyms function
+        console.log(" | New Keyword Object using Anonyms function |");
+        var arr2 = new Object(
+            {
+                name: "Ayesha", class: " CS", roll: 13,
+                nameclass: function () {
+                    return this.name + " " + this.class + " " + this.roll;
+                }
+
+            }
+        );
+        console.log(arr2.nameclass(), "new Keyword Object");
+
+
+
+    </script>
+    <script>
+        console.log("\n === Car Showroom Management System ===\n ");
+
+        // 1️⃣ Using new Array()
+        var brands = new Array("Toyota", "Honda", "Suzuki", "KIA");
+        console.log("Available Brands: " + brands.join(", "));
+
+        // 2️⃣ Using new Object()
+        var car1 = new Object({
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2023,
+            price: 4200000,
+            getDetails: function () {
+                return this.brand + " " + this.model + " (" + this.year + ") - Rs." + this.price;
+            }
+        });
+        console.log("\nFeatured Car (Created using new Object):");
+        console.log(car1.getDetails());
+
+        // 3️⃣ Using Function Constructor + new keyword
+        function Car(brand, model, year, price) {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+            this.price = price;
+            this.discount = function (percent) {
+                var finalPrice = this.price - (this.price * percent / 100);
+                console.log("\nCar: " + this.brand + " " + this.model + " (" + this.year + ")");
+                console.log("Original Price: Rs." + this.price);
+                console.log("After " + percent + "% Discount: Rs." + finalPrice);
+            };
+        }
+
+        // Creating multiple car objects using new
+        var car2 = new Car("Honda", "Civic", 2024, 5600000);
+        var car3 = new Car("Suzuki", "Alto", 2023, 2500000);
+        var car4 = new Car("KIA", "Sportage", 2024, 7800000);
+
+        console.log("\nCars Available in Showroom (Created using Constructor):");
+        car2.discount(10);
+        car3.discount(5);
+        car4.discount(12);
+
+        // 4️⃣ Using new Array() to store all cars
+        var allCars = new Array(car1, car2, car3, car4);
+        console.log("\nTotal Cars in System: " + allCars.length);
+        console.log("Project Completed Successfully!");
+
+    </script>
+
+
+</body>
+
+</html>
