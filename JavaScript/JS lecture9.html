@@ -1,0 +1,528 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM & Array Methods</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f0f4ff, #e6f7ff);
+      color: #333;
+    }
+
+    header {
+      background-color: #0078ff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 35px;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #0078ff;
+      border-left: 6px solid #0078ff;
+      padding-left: 10px;
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #f0f8ff;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-left: 5px solid #0078ff;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #0078ff;
+      color: white;
+      font-size: 15px;
+    }
+
+    .highlight {
+      background: #e8f0ff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 8px;
+      font-family: Consolas, monospace;
+      font-size: 15px;
+      color: #333;
+    }
+     .btn{
+      height: 50px;
+     
+     
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> JavaScript DOM & Array Methods </h1>
+  </header>
+
+   <button class="btn" onclick="changeTheme()">Change Theme</button>
+
+  <main>
+    <section>
+      <h2> What is the DOM?</h2>
+      <p>
+        The <b>Document Object Model (DOM)</b> is a programming interface for web documents.
+        It represents the page so that programs can change the document structure, style, and content.
+        JavaScript uses the DOM to interact with and modify elements dynamically.
+      </p>
+      <ul>
+        <li><b>document.getElementById()</b> — Selects an element by its ID.</li>
+        <li><b>document.querySelector()</b> — Selects the first matching element.</li>
+        <li><b>element.innerHTML</b> — Gets or sets the inner HTML content.</li>
+        <li><b>element.style</b> — Changes an element’s CSS using JavaScript.</li>
+        <li><b>addEventListener()</b> — Attaches an event handler to an element.</li>
+      </ul>
+
+      <div class="highlight">
+        Example:<br>
+        const title = document.getElementById("mainHeading");<br>
+        title.style.color = "blue";
+      </div>
+    </section>
+
+    <section>
+      <h2> JavaScript Array Methods</h2>
+      <p>
+        JavaScript arrays come with many built-in methods to make data manipulation easier.
+        These methods help in adding, removing, sorting, and filtering array elements.
+      </p>
+      <ul>
+        <li><b>push()</b> — Adds an element at the end.</li>
+        <li><b>pop()</b> — Removes the last element.</li>
+        <li><b>shift()</b> — Removes the first element.</li>
+        <li><b>unshift()</b> — Adds an element at the beginning.</li>
+        <li><b>map()</b> — Creates a new array by applying a function to each element.</li>
+        <li><b>filter()</b> — Returns elements that satisfy a condition.</li>
+        <li><b>forEach()</b> — Runs a function on every element (no return).</li>
+        <li><b>sort()</b> — Sorts array elements alphabetically or numerically.</li>
+        <li><b>reverse()</b> — Reverses the order of elements.</li>
+      </ul>
+
+      <div class="highlight">
+        Example:<br>
+        const numbers = [1, 2, 3, 4];<br>
+        const double = numbers.map(num => num * 2);<br>
+        console.log(double); // [2, 4, 6, 8]
+      </div>
+    </section>
+  </main>
+
+  <footer>
+     JavaScript Learning Project 
+  </footer>
+
+  <script>
+    // Array methods  | Push, pop , shift , unshift , splice , filter 
+    // DOM  , Events
+
+    // || Push ||
+    console.log(" | Array Push |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.push("website");
+     console.log(arr1);
+
+      // || Pop ||
+    console.log(" | Array Pop |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.pop();
+     console.log(arr1);
+
+     // || unShift ||
+    console.log(" | Array unShift |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.unshift("web application");
+     console.log(arr1);  
+     
+      // || Shift ||
+    console.log(" | Array Shift |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.shift();
+     console.log(arr1);  
+
+      // || Splice ||
+    console.log(" | Array Splice for adding |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.splice(1,0,"blueberry");
+     console.log(arr1); 
+      console.log(" | Array Splice for removing |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.splice(1,0);
+     console.log(arr1);  
+
+      // || filter ||
+    console.log(" | Array filter |");
+    var arr2=arr1.filter(function(item){
+      return item!=="oop";
+    });
+    console.log(arr2, "filter");
+
+    //  || DOM Document Object Model ||
+      let h2=document.getElementById("start");
+      let body=document.getElementsByTagName("body");
+       h2.innerHTML="DOM Methods";
+      //  h2.style.color="Blue";
+       h2.onclick=function(){
+       console.log(body);
+        body[0].style.backgroundColor="lightgrey";
+       }
+       
+
+    
+  </script>
+
+  <script>
+    // Track current theme
+    let dark = false;
+
+    // Add event
+   function changeTheme() {
+      if (dark) {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        dark=false;
+      } else {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        dark=true;
+      }
+    };
+  </script>
+
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM & Array Methods</title>
+  <style>
+    /* ====== DEFAULT LIGHT THEME ====== */
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f0f4ff, #e6f7ff);
+      color: #333;
+      transition: 0.5s;
+    }
+
+    header {
+      background-color: #0078ff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 35px;
+      letter-spacing: 1px;
+    }
+
+    #themeBtn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: #ffffff;
+      color: #0078ff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    #themeBtn:hover {
+      background-color: #0078ff;
+      color: white;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #0078ff;
+      border-left: 6px solid #0078ff;
+      padding-left: 10px;
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #f0f8ff;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-left: 5px solid #0078ff;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #0078ff;
+      color: white;
+      font-size: 15px;
+    }
+
+    .highlight {
+      background: #e8f0ff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 8px;
+      font-family: Consolas, monospace;
+      font-size: 15px;
+      color: #333;
+    }
+
+    /* ====== DARK THEME ====== */
+    .dark {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    .dark header {
+      background-color: #1e293b;
+      color: #f1f5f9;
+    }
+
+    .dark main {
+      background: #1e293b;
+      box-shadow: 0 6px 20px rgba(255,255,255,0.1);
+    }
+
+    .dark h2 {
+      color: #38bdf8;
+      border-left-color: #38bdf8;
+    }
+
+    .dark ul li {
+      background: #334155;
+      border-left: 5px solid #38bdf8;
+    }
+
+    .dark .highlight {
+      background: #334155;
+      color: #e2e8f0;
+    }
+
+    .dark footer {
+      background-color: #1e293b;
+      color: #f1f5f9;
+    }
+
+    .dark #themeBtn {
+      background-color: #38bdf8;
+      color: #0f172a;
+    }
+
+    .dark #themeBtn:hover {
+      background-color: white;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> JavaScript DOM & Array Methods </h1>
+    <button id="themeBtn"> Dark Mode</button>
+  </header>
+
+  <main>
+    <section>
+      <h2> What is the DOM?</h2>
+      <p>
+        The <b>Document Object Model (DOM)</b> represents the structure of a web page.
+        It allows JavaScript to access and change HTML elements, attributes, and CSS styles dynamically.
+      </p>
+      <ul>
+        <li><b>document.getElementById()</b> — Selects an element by its ID.</li>
+        <li><b>document.querySelector()</b> — Selects the first matching element.</li>
+        <li><b>element.innerHTML</b> — Changes HTML content.</li>
+        <li><b>element.style.property</b> — Changes CSS using JavaScript.</li>
+        <li><b>addEventListener()</b> — Adds an event listener to an element.</li>
+      </ul>
+
+      <div class="highlight">
+        Example:<br>
+        const title = document.getElementById("mainHeading");<br>
+        title.style.color = "blue";
+      </div>
+    </section>
+
+    <section>
+      <h2> JavaScript Array Methods</h2>
+      <p>
+        JavaScript arrays come with many built-in methods that make it easy to work with data.
+        These methods can add, remove, or transform elements efficiently.
+      </p>
+      <ul>
+        <li><b>push()</b> — Adds an element to the end.</li>
+        <li><b>pop()</b> — Removes the last element.</li>
+        <li><b>shift()</b> — Removes the first element.</li>
+        <li><b>unshift()</b> — Adds an element at the beginning.</li>
+        <li><b>map()</b> — Returns a new array after applying a function to each element.</li>
+        <li><b>filter()</b> — Returns elements that satisfy a condition.</li>
+        <li><b>forEach()</b> — Executes a function for each element.</li>
+        <li><b>sort()</b> — Sorts the array elements.</li>
+        <li><b>reverse()</b> — Reverses the order of elements.</li>
+      </ul>
+
+      <div class="highlight">
+        Example:<br>
+        const nums = [1, 2, 3, 4];<br>
+        const doubled = nums.map(n => n * 2);<br>
+        console.log(doubled); // [2, 4, 6, 8]
+      </div>
+    </section>
+  </main>
+
+  <footer>
+     JavaScript Learning Project 
+  </footer>
+
+  <script>
+    const btn = document.getElementById("themeBtn");
+    btn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+
+      // Change button text based on theme
+      if (document.body.classList.contains("dark")) {
+        btn.textContent = "☀ Light Mode";
+      } else {
+        btn.textContent = " Dark Mode";
+      }
+    });
+  </script>
+
+   <script>
+    // Array methods  | Push, pop , shift , unshift , splice , filter 
+    // DOM  , Events
+
+    // || Push ||
+    console.log(" | Array Push |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.push("website");
+     console.log(arr1);
+
+      // || Pop ||
+    console.log(" | Array Pop |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.pop();
+     console.log(arr1);
+
+     // || unShift ||
+    console.log(" | Array unShift |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.unshift("web application");
+     console.log(arr1);  
+     
+      // || Shift ||
+    console.log(" | Array Shift |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.shift();
+     console.log(arr1);  
+
+      // || Splice ||
+    console.log(" | Array Splice for adding |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.splice(1,0,"blueberry");
+     console.log(arr1); 
+      console.log(" | Array Splice for removing |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.splice(1,0);
+     console.log(arr1);  
+
+      // || filter ||
+    console.log(" | Array filter |");
+    var arr2=arr1.filter(function(item){
+      return item!=="oop";
+    });
+    console.log(arr2, "filter");
+
+    //  || DOM Document Object Model ||
+      let h2=document.getElementById("start");
+      let body=document.getElementsByTagName("body");
+       h2.innerHTML="DOM Methods";
+      //  h2.style.color="Blue";
+       h2.onclick=function(){
+       console.log(body);
+        body[0].style.backgroundColor="lightgrey";
+       }
+       
+
+    
+  </script>
+
+</body>
+</html>
