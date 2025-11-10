@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Event Playground</title>
+  <style>
+    /*  Body Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #da5c148e 0%, #6f0a9e 100%);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+    }
+
+    /* 🏷 Heading Section */
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p.subtitle {
+      font-size: 1.1em;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    /*  Interactive Container */
+    .container {
+      background: #ffffffaf;
+      color: #333;
+      width: 80%;
+      max-width: 800px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      transition: 0.5s;
+    }
+
+    /*  Input & Select Styling */
+    input, select {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus {
+      transform: scale(1.03);
+      box-shadow: 0 0 8px #460963;
+    }
+
+    /*  Display Box */
+    #display {
+      background: #f9f9f9;
+      margin-top: 25px;
+      padding: 20px;
+      border-radius: 12px;
+      min-height: 120px;
+      font-size: 1.5em;
+      line-height: 1.5;
+      word-wrap: break-word; /* Text will not overflow */
+      white-space: pre-wrap;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    /*  Button Styling */
+    button {
+      background: #b213b8;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #da5c148e ;
+      transform: translateY(-3px);
+    }
+    #themeBtn {
+  position: fixed;   /* stays at top */
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #dac82c;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+#themeBtn:hover {
+  background: #af11ee;
+  transform: scale(1.05);
+}
+
+    
+
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+    <button id="themeBtn" onclick="toggleTheme()"> Toggle Theme</button>
+
+
+
+  <h1> Interactive JS Event Playground</h1>
+ 
+
+  <div class="container">
+    <input 
+      type="text" 
+      id="textInput" 
+      placeholder="✏ Type your message here..."
+      oninput="updateText()" 
+      onkeyup="showTypingMessage()">
+
+    <select id="colorSelect" onchange="changeBackground()">
+  <option value=""> Select Background Color</option>
+  <option value="#ffb6c1">Soft Pink</option>
+  <option value="#90ee90">Fresh Green</option>
+  <option value="#87cefa">Sky Blue</option>
+  <option value="#ffa07a">Peach</option>
+  <option value="#f0e68c">Warm Yellow</option>
+  <option value="#dda0dd">Purple Glow</option>
+  <option value="#ff8c00">Sunset Orange</option>
+  <option value="#00ced1">Aqua Blue</option>
+</select>
+
+    <button onclick="resetAll()"> Reset</button>
+
+    <div id="display">🖋 Your live text will appear here...</div>
+  </div>
+
+  
+
+  <script>
+    const textInput = document.getElementById("textInput");
+    const colorSelect = document.getElementById("colorSelect");
+    const display = document.getElementById("display");
+
+    //  oninput — live update text
+    function updateText() {
+      const value = textInput.value.trim();
+      display.textContent = value || "🖋 Your live text will appear here...";
+    }
+
+    //  onkeyup — show typing message in console
+    function showTypingMessage() {
+      console.log("You typed: " + textInput.value);
+    }
+
+    //  onchange — change background color of display box
+    function changeBackground() {
+      const selectedColor = colorSelect.value;
+      display.style.backgroundColor = selectedColor || "#f9f9f9";
+    }
+
+    //  onclick — reset all
+    function resetAll() {
+      textInput.value = "";
+      colorSelect.value = "";
+      display.textContent = "🖋 Your live text will appear here...";
+      display.style.backgroundColor = "#f9f9f9";
+    }
+
+    let darkTheme = true; // starting theme is dark
+
+function toggleTheme() {
+  if(darkTheme) {
+    // Switch to Light Theme
+    document.body.style.background = "#f0f0f0";
+    document.body.style.color = "#333";
+    document.querySelector(".container").style.background = "#ffffff";
+    document.querySelector("#display").style.background = "#e8e8e8";
+    darkTheme = false;
+  } else {
+    // Switch back to Dark Theme
+    document.body.style.background = " linear-gradient(135deg, #1e3c72, #2a5298)";
+    document.body.style.color = "#fff";
+    document.querySelector(".container").style.background = "#ffffff";
+    document.querySelector("#display").style.background = "#f5f5f5";
+    darkTheme = true;
+  }
+}
+
+
+  
+  </script>
+
+</body>
+</html>
