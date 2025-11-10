@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Theme</title>
+  <style>
+    .btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: #6adfb8;
+      color: rgba(1, 27, 31, 0.445);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background-color: #0078ff;
+      color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript DOM , Array Methods </h1>
+  <p> push | pop | shift | unshift | splice | filter </p>
+  <h2 id="start">"DOM" Document Object Models</h2>
+  
+
+  <button class="btn" onclick="changeTheme()">Change Theme</button>
+  <script>
+    // Array methods  | Push, pop , shift , unshift , splice , filter 
+    // DOM  , Events
+
+    // || Push ||S
+    console.log(" | Array Push |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.push("website");
+     console.log(arr1);
+
+      // || Pop ||
+    console.log(" | Array Pop |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.pop();
+     console.log(arr1);
+
+     // || unShift ||
+    console.log(" | Array unShift |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.unshift("web application");
+     console.log(arr1);  
+     
+      // || Shift ||
+    console.log(" | Array Shift |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.shift();
+     console.log(arr1);  
+
+      // || Splice ||
+    console.log(" | Array Splice for adding |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.splice(1,0,"blueberry");
+     console.log(arr1); 
+      console.log(" | Array Splice for removing |");
+    var arr1=["statistic", "linear algebra " , "oop" , "DSA"];
+     arr1.splice(1,0);
+     console.log(arr1);  
+
+      // || filter ||
+    console.log(" | Array filter |");
+    var arr2=arr1.filter(function(item){
+      return item!=="oop";
+    });
+    console.log(arr2, "filter");
+
+    //  || DOM Document Object Model ||
+      let h2=document.getElementById("start");
+      let body=document.getElementsByTagName("body");
+       h2.innerHTML="DOM Methods";
+      //  h2.style.color="Blue";
+       h2.onclick=function(){
+       console.log(body);
+        body[0].style.backgroundColor="lightgrey";
+       }
+       
+
+    
+  </script>
+
+  <script>
+    // Track current theme
+    let dark = false;
+
+    // Add event
+   function changeTheme() {
+      if (dark) {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        dark=false;
+      } else {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        dark=true;
+      }
+    };
+  </script>
+
+</body>
+</html>
